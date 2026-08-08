@@ -137,7 +137,7 @@ void JimothyEditor::paint (juce::Graphics& g)
     g.setFont (laf.terminal (9.0f));
     g.drawText (juce::String::fromUTF8 (
         "El\xc3\xa4k\xc3\xb6\xc3\xb6n Jimothy  \xe2\x80\x94  (c) 2006 zero dollar studio"
-        "  \xe2\x80\x94  v0.3-feral"),
+        "  \xe2\x80\x94  v0.0-feral"),
         0, getHeight() - 16, getWidth(), 14,
         juce::Justification::centred);
 }

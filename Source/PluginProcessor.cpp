@@ -107,7 +107,7 @@ void JimothyProcessor::getStateInformation (juce::MemoryBlock& destData)
 
     // Stamp the session blob the same way a bank file is stamped. Without this
     // a future build with a different parameter set would load an old session
-    // and silently mean something else by the same slots — the X1 failure.
+    // and silently mean something else by the same slots.
     state.setProperty ("jimothySchema",   Jimothy::PresetIO::schemaVersion,  nullptr);
     state.setProperty ("jimothyVersion",  Jimothy::PresetIO::productVersion, nullptr);
     state.setProperty ("jimothyParamSet",

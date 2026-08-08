@@ -17,7 +17,7 @@ namespace
         return h;
     }
 
-    // "25 Jul 2026 2:26pm" — Wusik's stamp, lowercase meridian and no zero pad
+    // "25 Jul 2026 2:26pm" — the borrowed stamp: lowercase meridian, no zero pad
     // on the hour, so a bank written by either tool reads the same way.
     juce::String wusikDate (const juce::Time& t)
     {
@@ -152,7 +152,7 @@ bool PresetIO::fromText (const juce::String& text,
     const auto info = parseHeader (text.substring (0, nl).trim());
     const auto trouble = describeIncompatibility (info);
 
-    // A newer schema is refused outright — guessing is how X1 got here.
+    // A newer schema is refused outright — never guess at state.
     if (! info.valid || info.schema > schemaVersion)
     {
         problem = trouble;

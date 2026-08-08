@@ -45,10 +45,11 @@ namespace Jimothy
         // session so a state blob written by one build cannot be silently
         // loaded by a build that means something different by the same slots.
         //
-        // APPEND ONLY. Never insert, never reorder, never delete. Wusik X1
-        // inserted sixty parameters at index 5 between two betas while keeping
-        // the VST3 class UID byte-identical, and hosts loaded the old state with
-        // no warning and no mismatch dialog. That is the failure this prevents.
+        // APPEND ONLY. Never insert, never reorder, never delete. A synth we
+        // studied inserted sixty parameters mid-list between two betas while
+        // keeping the VST3 class UID byte-identical, and hosts loaded the old
+        // state with no warning and no mismatch dialog. That is the failure
+        // this prevents.
         inline constexpr const char* ordered[] =
         {
             DRIVE, TONE, LEAN, GRIME, SPUTTER, GATE, BLEND, LEVEL,

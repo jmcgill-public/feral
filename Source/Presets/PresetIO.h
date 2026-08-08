@@ -5,25 +5,26 @@
 
 // ─────────────────────────────────────────────────────────────────────────────
 // PresetIO — .jimpreset / .jimbank
-// Wusik X1 is not GPL, or even released.
-// The file convention is Wusik X1's, because it is a good one: a binary or text
-// payload that opens with a single human-readable ASCII line naming the product,
-// the kind of file, the date, and the build. `head -1` on a bank tells you what
-// it is. That survives being emailed, renamed, and found on a backup drive three
-// years later.
 //
-//   Wusik X1 - Bank Of Presets - Date: 25 Jul 2026 2:26pm - Version #00100
+// The file convention is borrowed from an old freeware synth, because it is a
+// good one: a binary or text payload that opens with a single human-readable
+// ASCII line naming the product, the kind of file, the date, and the build.
+// `head -1` on a bank tells you what it is. That survives being emailed,
+// renamed, and found on a backup drive three years later.
 //
-// Two fields are added that X1 does not carry, and their absence is the reason
-// this file exists:
+//   Jimothy - Bank Of Presets - Date: 25 Jul 2026 2:26pm - Version #00300
+//
+// Two fields are added that the borrowed convention does not carry, and their
+// absence is the reason this file exists:
 //
 //   Schema   — the state format version. A newer schema is refused, not guessed.
 //   ParamSet — a fingerprint of the ordered parameter ID list.
 //
-// X1 inserted sixty parameters at index 5 between two betas while leaving the
-// VST3 class UID byte-identical. Hosts loaded the old state into the new build
-// with no warning, no mismatch dialog, and silently wrong values. Every X1 beta
-// reports FileVersion 1.0.0, so nothing in the file could have caught it.
+// The synth we borrowed it from once inserted sixty parameters mid-list
+// between two betas while leaving the VST3 class UID byte-identical. Hosts
+// loaded the old state into the new build with no warning, no mismatch dialog,
+// and silently wrong values — and every beta reported the same FileVersion,
+// so nothing in the file could have caught it.
 //
 // Jimothy stamps the fingerprint into every preset, bank, and session blob it
 // writes, and checks it on the way back in.

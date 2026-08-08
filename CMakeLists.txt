@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.22)
-project(JimothyFeral VERSION 0.3.0)
+# 0.0.0: the public release starts at zero. The core's state-format lineage
+# (PresetIO productVersion, the PRE-0.3 migration) is its own number and does
+# not follow this one.
+project(JimothyFeral VERSION 0.0.0)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
