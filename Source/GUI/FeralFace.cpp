@@ -239,10 +239,16 @@ void FeralFace::paintGateEye (juce::Graphics& g)
 
     const float midY = gateEyeCentre.y;
 
+    // The wave must fit the iris: rails map inside the aperture, not to the
+    // oversized plot. A fuzz lives at the rails, and rails outside the eye
+    // is a wave meter that hides the waveform. Time still runs off the
+    // edges; amplitude does not.
+    const float amp = eyeRadius * 0.82f;
+
     // Unity rails and the station-green zero line.
     g.setColour (gridLine);
-    g.drawLine (plot.getX(), plot.getY(),      plot.getRight(), plot.getY(),      0.5f);
-    g.drawLine (plot.getX(), plot.getBottom(), plot.getRight(), plot.getBottom(), 0.5f);
+    g.drawLine (plot.getX(), midY - amp, plot.getRight(), midY - amp, 0.5f);
+    g.drawLine (plot.getX(), midY + amp, plot.getRight(), midY + amp, 0.5f);
 
     g.setColour (JimothyLookAndFeel::stationGreen().withAlpha (0.55f));
     g.drawLine (plot.getX(), midY, plot.getRight(), midY, 1.0f);
@@ -258,7 +264,7 @@ void FeralFace::paintGateEye (juce::Graphics& g)
             const float x = juce::jmap ((float) i, 0.0f, (float) (n - 1),
                                         plot.getX(), plot.getRight());
             const float y = midY - juce::jlimit (-1.0f, 1.0f, samples[(size_t) i])
-                                       * plot.getHeight() * 0.5f;
+                                       * amp;
 
             if (trace.isEmpty()) trace.startNewSubPath (x, y);
             else                 trace.lineTo (x, y);
@@ -293,8 +299,14 @@ void FeralFace::paintKneeEye (juce::Graphics& g)
                                      juce::jmax (1.0f, (chokeRange + 1.0f) / gain),
                                      (4.0f + chokeRange) / gain);
 
+    // Same iris rule as the gate eye: the clip plateaus are the story, so
+    // the ±1 rails must land inside the aperture, not the oversized plot.
+    const float amp = eyeRadius * 0.82f;
+
     const auto toX = [&] (float x) { return juce::jmap (x, -xMax, xMax, plot.getX(), plot.getRight()); };
-    const auto toY = [&] (float y) { return juce::jmap (y, -1.0f, 1.0f, plot.getBottom(), plot.getY()); };
+    const auto toY = [&] (float y) { return juce::jmap (y, -1.0f, 1.0f,
+                                                        kneeEyeCentre.y + amp,
+                                                        kneeEyeCentre.y - amp); };
 
     g.setColour (gridLine);
     for (int i = 1; i < 4; ++i)

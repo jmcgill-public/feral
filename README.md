@@ -1,5 +1,5 @@
 Jimothy [Feral Edition]
-v0.0.0 - Windows - VST3
+v0.0.1 - Windows - VST3
 No Taming
 
 INSTALL
