@@ -1,6 +1,6 @@
 Jimothy [Feral Edition]
 v0.0.1 - Windows - VST3
-No Taming
+![=^^=](art/panel-v0.0.png)
 
 INSTALL
 
@@ -38,4 +38,3 @@ WHAT THIS ISN'T
       shut when it collapses. Behind the lid, the post-pedal waveform.
       The left eye is the knee. It narrows as hard playing starves gain, 
       and reopens as the note swells. Behind his eyelid, clip.
-
