@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <!-- JIMOTHY — the face, v8. -->
+  <rect width="800" height="800" fill="#ffffff"/>
+  <g transform="rotate(-3 400 300)">
+    <!-- head outline, clockwise: upright triangle ears, serrated cheeks -->
+    <path fill="#111111" d="
+      M 400 168
+      C 410 168 418 165 426 158
+      L 490 84
+      L 500 192
+      C 526 212 550 246 566 290
+      L 596 302 L 566 320 L 592 340 L 558 352
+      C 544 396 500 428 462 434
+      C 442 438 420 440 400 440
+      C 380 440 358 438 338 434
+      C 300 428 256 396 242 352
+      L 208 340 L 234 320 L 204 302 L 234 290
+      C 250 246 274 212 300 192
+      L 310 84
+      L 374 158
+      C 382 165 390 168 400 168
+      Z"/>
+    <!-- left ear bite: white V crossing the outer edge -->
+    <path fill="#ffffff" d="M 288 150 L 324 128 L 292 106 Z"/>
+    <!-- right inner-ear knockout -->
+    <path fill="#ffffff" d="M 462 150 L 486 114 L 482 162 Z"/>
+    <!-- face knockout -->
+    <path fill="#ffffff" d="
+      M 400 206
+      C 340 206 298 226 284 258
+      C 272 286 272 318 286 346
+      C 304 384 336 412 372 424
+      C 390 430 410 430 428 424
+      C 464 412 496 384 514 346
+      C 528 318 528 286 516 258
+      C 502 226 460 206 400 206
+      Z"/>
+    <!-- the mask -->
+    <path fill="#111111" d="
+      M 276 266
+      C 302 244 338 232 356 234
+      C 372 236 386 244 400 244
+      C 414 244 428 236 444 234
+      C 462 232 498 244 524 266
+      C 528 280 528 294 524 308
+      C 504 326 476 334 456 328
+      C 438 322 420 310 400 310
+      C 380 310 362 322 344 328
+      C 324 334 296 326 276 308
+      C 272 294 272 280 276 266
+      Z"/>
+    <!-- the eyes: EQUAL circles — the drill template -->
+    <circle cx="334" cy="278" r="21" fill="#ffffff"/>
+    <circle cx="466" cy="278" r="21" fill="#ffffff"/>
+    <!-- nose + philtrum -->
+    <path fill="#111111" d="
+      M 400 350
+      C 384 350 373 358 373 368
+      C 373 381 387 390 400 390
+      C 413 390 427 381 427 368
+      C 427 358 416 350 400 350 Z"/>
+    <rect x="397" y="388" width="6" height="22" fill="#111111"/>
+    <!-- whiskers -->
+    <g stroke="#111111" stroke-width="5" stroke-linecap="round">
+      <line x1="348" y1="360" x2="312" y2="352"/>
+      <line x1="348" y1="374" x2="308" y2="374"/>
+      <line x1="348" y1="388" x2="314" y2="396"/>
+      <line x1="452" y1="360" x2="488" y2="352"/>
+      <line x1="452" y1="374" x2="492" y2="374"/>
+      <line x1="452" y1="388" x2="486" y2="396"/>
+    </g>
+  </g>
+</svg>
