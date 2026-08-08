@@ -1,39 +1,41 @@
-# Jimothy Feral
+Jimothy [Feral Edition]
+v0.3.0 - Windows - VST3
+No Taming
 
-A hyperfuzz that will not be tamed. VST3/AU/Standalone, Windows-first.
+INSTALL
 
-This is the released edition of Jimothy. The full version exists and is not
-released. What this one doesn't have is paperwork: no presets (the host menu
-shows one entry — *it starts here*), no numbers on the knobs, no meters.
-Instead you get Jimothy's eyes: the right one is the gate, the left one is the
-knee, and behind each lid is a clipped glimpse of the real instrument — drawn
-by the same code the audio goes through, so even the glimpse cannot lie. If
-the whiskers are breathing, the instance is alive.
+Copy Jimothy Feral.vst3 into:
 
-[Readme.txt](Readme.txt) is the shipped documentation.
+    C:\Program Files\Common Files\VST3\
 
-## Build
+That is the whole install. There is no installer, and there is nothing here
+Windows will block: a .vst3 is loaded by your DAW, never launched by Explorer,
+so SmartScreen never evaluates it and no "Windows protected your PC" prompt can
+appear. If your host does not see it after copying, rescan your plugin folders.
 
-```
-cmake -B build
-cmake --build build --config Release
-```
+Jimothy is an effect. Put it on a track that already has audio on it - a guitar,
+a bass, a drum bus. It is not an instrument and will not respond to MIDI.
 
-JUCE 7.0.9 is fetched automatically at configure time. The burst harness
-(`ctest`-free, JUCE-free) builds alongside and enforces the behavioral
-contract:
+WHAT THIS IS
 
-```
-./build/Release/jimothy_harness
-```
+  * A VST effect tested in REAPER with input from passive & active guitar.
+  * An AI-assisted software design. If this bothers you, you're following
+    the wrong developer.
+  * A bag of audio algorithms to simulate charge and starvation in a (real)
+    TL072/JFET fuzz pedal currently on the breadboard.
 
-## License
+WHAT THIS ISN'T
 
-Two licenses, one animal — see [LICENSE](LICENSE) for the map:
+  * Presets. Your host's preset menu shows one entry: "it starts here".
+    It does. Your session still saves and reloads exactly as you left it -
+    what you cannot do is save a sound and carry it somewhere else.
 
-* **Software** — [AGPL-3.0-or-later](COPYING).
-* **Artwork** (`art/jimothy-face.svg`, the face) — [CC BY-NC-ND 4.0](LICENSE-ART).
-  Fork the code freely; Jimothy himself is not yours to rebrand. Jimothy is a
-  real raccoon, and his likeness stays his.
+  * Numbers. Every knob says what it is and never says where it sits.
 
-Eläköön Jimothy.
+  * Meters. The full version has a transfer curve display, a scope, and a
+    signal meter that doesn't lie. Here you get Jimothy's spirit:
+      The right eye (yours, not his) is the gate. Open when signal passes,
+      shut when it collapses. Behind the lid, the post-pedal waveform.
+      The left eye is the knee. It narrows as hard playing starves gain, 
+      and reopens as the note swells. Behind his eyelid, clip.
+
