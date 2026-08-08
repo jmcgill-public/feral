@@ -4,8 +4,11 @@
 
 namespace
 {
-    // Eye interiors match the full version's panel fill: inside Jimothy's
-    // eyes are the instruments.
+    // We started with a drill template layout for the real pedal.
+    // That turned into a decal, and the decal turned into an SVG.
+    // The SVG was the AI prompt for the feral panel.
+    // On the pedal, Jimothy's eyes are just gate & sputter meters.
+    // On the VST, inside Jimothy's eyes are the instruments.
     const juce::Colour panelFill { 0xFF0C0C1A };
     const juce::Colour gridLine  { 0xFF16162A };
 

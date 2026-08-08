@@ -2,6 +2,7 @@
 #include <juce_gui_basics/juce_gui_basics.h>
 
 // ─────────────────────────────────────────────────────────────────────────────
+// 100% machine-generated. Mostly pro-forma JUCE template.
 // JimothyLookAndFeel — the feral register
 //
 // Jimothy's own voice, and only his. Hehku is the ember — the heat from
@@ -20,7 +21,7 @@
 //   If something moves, it is communicating information.
 //   The one exception: the hiljaisuus pulse, and it breathes in the whiskers.
 //
-// The color names are load-bearing. Do not rename them to generic values.
+// Do not rename colors to generic values.
 // ─────────────────────────────────────────────────────────────────────────────
 
 class JimothyLookAndFeel : public juce::LookAndFeel_V4
@@ -69,7 +70,7 @@ public:
                               float cellSize = 18.0f,
                               juce::Colour colour = juce::Colour (0xFF0E0E22));
 
-    // ── Hiljaisuus pulse ─────────────────────────────────────────────────────
+    // ── Hiljaisuus pulse ─ if you have to ask you don't know jaakko ──────────
     // Returns a pulse value [0,1] for the current time. Rate: ~0.15Hz.
     static float hiljaisuusPulse (double timeInSeconds);
 

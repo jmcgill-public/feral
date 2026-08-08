@@ -5,7 +5,7 @@
 
 // ─────────────────────────────────────────────────────────────────────────────
 // PresetIO — .jimpreset / .jimbank
-//
+// Wusik X1 is not GPL, or even released.
 // The file convention is Wusik X1's, because it is a good one: a binary or text
 // payload that opens with a single human-readable ASCII line naming the product,
 // the kind of file, the date, and the build. `head -1` on a bank tells you what

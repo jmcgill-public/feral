@@ -16,6 +16,14 @@ appear. If your host does not see it after copying, rescan your plugin folders.
 Jimothy is an effect. Put it on a track that already has audio on it - a guitar,
 a bass, a drum bus. It is not an instrument and will not respond to MIDI.
 
+WHAT THIS IS
+
+  * A VST effect tested in REAPER with input from passive & active guitar.
+  * An AI-assisted software design. If this bothers you, you're following
+    the wrong developer.
+  * A bag of audio algorithms to simulate charge and starvation in a (real)
+    TL072/JFET fuzz pedal currently on the breadboard.
+
 WHAT THIS ISN'T
 
   * Presets. Your host's preset menu shows one entry: "it starts here".

@@ -5,24 +5,24 @@
 #include <cstdint>
 
 // ─────────────────────────────────────────────────────────────────────────────
-// JimothyShape — the pure core
-//
-// Everything Jimothy *is* lives in this header, and nothing else does: the
-// transfer curve, the charge organ that starves it, and the per-unit constants
-// that make this instance this instance. Deliberately JUCE-free, because three
-// different consumers must run the identical code or one of them is lying:
-//
+// JimothyShape — the pure core — JUCE-free
+//  * transfer curve
+//  * charge (starvation)
+//  * per-unit constants
 //   Pedal::process        — the audio
 //   TransferCurveDisplay  — the curve the panel draws
 //   tests/burst_harness   — the measurements published in BRIEF.md
 //
-// The charge organ is a behavioral state model with constants matched to the
-// measured hardware tables (hardware/JIMOTHY_HW.md, spice/burst.cir) — not a
-// component-level circuit simulation. The animal is re-embodied, not ported:
-// hardware pumps a coupling cap through a starved diode chain; this pumps a
-// state variable from the rectified signal. Same behavioral contract — "eats
-// sustain and the note after the hit; respects the hit itself" — different
-// metabolism.
+// We measured hardware tables for real circuits:
+//   hardware/JIMOTHY_HW.md, spice/burst.cir
+// Instead of running a component-level simulation, we informed a model
+// with behavioral data derived from different (real) silicon fuzz pedals.
+// Credit where due: the basic bazz fuss, the Minotaur Evil Eye, The Swede,
+// and not-so-much-really the SF-2 and SF-300.
+//
+// Template-driven, pro-forma, lifted-from-well-known-sources, all GPL,
+// using math I only understand superficially.
+// TL;DR this is what you get when you _don't_ model your vst on spice.
 // ─────────────────────────────────────────────────────────────────────────────
 
 namespace Jimothy

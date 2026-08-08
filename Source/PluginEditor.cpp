@@ -2,6 +2,7 @@
 
 // ─────────────────────────────────────────────────────────────────────────────
 // PedalKnob
+// 100% machine generated, by a model trained on JUCE, useless w/o JUCE.
 // ─────────────────────────────────────────────────────────────────────────────
 
 PedalKnob::PedalKnob (const juce::String& caption,
@@ -33,6 +34,9 @@ void PedalKnob::resized()
 
 // ─────────────────────────────────────────────────────────────────────────────
 // JimothyEditor
+// Grown from the Kaiku editor's pattern; licensing is the map in LICENSE.
+// Old-school machine generated, yours to extend, modify, and improve.
+// The feral edition is a single-host program with no presets.
 // ─────────────────────────────────────────────────────────────────────────────
 
 JimothyEditor::JimothyEditor (JimothyProcessor& p)

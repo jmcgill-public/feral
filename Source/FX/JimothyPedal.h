@@ -11,6 +11,10 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // JimothyPedal — the nonlinear core
 //
+// Machine-generated from a Kaiku editor template. Parts of this code are
+// machine-generated, parts are hand-written; the license is the map in the
+// LICENSE that shipped with your copy.
+//
 // A hyperfuzz in the SF-2 / SF-300 family, with a trash-panda temperament.
 // The pedal is the nonlinearity plus the charge organ that starves it (both in
 // JimothyShape.h); everything else here exists to keep the mechanism legible
